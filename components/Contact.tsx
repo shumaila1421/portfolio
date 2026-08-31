@@ -21,6 +21,13 @@ export default function Contact() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
+              href="mailto:shumailariaz215@gmail.com"
+              className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-gray-800"
+            >
+              Email Me
+            </a>
+
+            <a
               href="https://github.com/shumaila1421"
               target="_blank"
               rel="noopener noreferrer"

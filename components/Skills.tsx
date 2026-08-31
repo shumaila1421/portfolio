@@ -8,8 +8,8 @@ const skillGroups = [
     skills: ["Tailwind CSS", "Bootstrap", "Responsive Design"],
   },
   {
-    title: "Tools",
-    skills: ["Git", "GitHub", "VS Code"],
+    title: "Tools & Workflow",
+    skills: ["Git", "GitHub", "VS Code", "npm", "REST APIs"],
   },
 ];
 

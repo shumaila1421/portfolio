@@ -51,10 +51,12 @@ export default function Projects() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article
               key={project.number}
-              className="group rounded-3xl border border-gray-200 p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className={`group rounded-3xl border border-gray-200 p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                index === 0 ? "md:col-span-2" : ""
+              }`}
             >
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-600">
@@ -89,7 +91,7 @@ export default function Projects() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-500 transition group-hover:text-black"
+                    className="inline-flex items-center rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-gray-800"
                   >
                     View Live Demo ↗
                   </a>
