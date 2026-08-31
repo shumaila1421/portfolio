@@ -1,6 +1,15 @@
 const projects = [
   {
     number: "01",
+    status: "Completed",
+    title: "Golden Bean Coffee Landing Page",
+    description:
+      "A responsive coffee shop landing page built with HTML, CSS, and JavaScript, featuring a clean layout and interactive elements.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://coffee-website-landing-page-sage.vercel.app/",
+  },
+  {
+    number: "02",
     status: "In Progress",
     title: "Study Abroad Dashboard",
     description:
@@ -8,21 +17,12 @@ const projects = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    number: "02",
+    number: "03",
     status: "Team Project",
     title: "Sales & Inventory Management System",
     description:
       "A full-stack management system developed collaboratively during an internship to manage sales and inventory operations.",
     technologies: ["Team Development", "Full Stack"],
-  },
-  {
-    number: "03",
-    status: "Completed",
-    title: "Golden Bean Coffee Landing Page",
-    description:
-      "A responsive coffee shop landing page built with HTML, CSS, and JavaScript, featuring a clean layout and interactive elements.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "YOUR_LIVE_URL",
   },
 ];
 
@@ -83,8 +83,21 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="mt-8 text-sm font-medium text-gray-400 transition group-hover:text-black">
-                Details coming soon →
+              <div className="mt-8">
+                {project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-gray-500 transition group-hover:text-black"
+                  >
+                    View Live Demo ↗
+                  </a>
+                ) : (
+                  <span className="text-sm font-medium text-gray-400">
+                    Details coming soon →
+                  </span>
+                )}
               </div>
             </article>
           ))}
