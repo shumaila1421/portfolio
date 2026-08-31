@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -9,31 +13,67 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="fixed top-0 z-50 w-full border-b border-gray-100/80 bg-white/80 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="#home" className="text-xl font-bold tracking-tight">
-          Shumaila<span className="text-gray-400">.</span>
-        </Link>
+      <nav className="mx-auto max-w-6xl px-6 py-4">
+        <div className="flex items-center justify-between">
+          <Link
+            href="#home"
+            className="text-xl font-bold tracking-tight"
+            onClick={() => setIsOpen(false)}
+          >
+            Shumaila<span className="text-gray-400">.</span>
+          </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
+          <div className="hidden items-center gap-8 md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-gray-500 transition hover:text-black"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3">
             <Link
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-gray-500 transition hover:text-black"
+              href="#contact"
+              className="hidden rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-gray-800 sm:block"
             >
-              {link.name}
+              Get in Touch
             </Link>
-          ))}
+
+            <button
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              className="rounded-full p-2 transition hover:bg-gray-100 md:hidden"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+            >
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
 
-        <Link
-          href="#contact"
-          className="rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-gray-800"
-        >
-          Get in Touch
-        </Link>
+        {isOpen && (
+          <div className="border-t border-gray-100 pb-2 pt-4 md:hidden">
+            <div className="flex flex-col gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-xl px-4 py-3 text-sm font-medium text-gray-600 transition hover:bg-gray-100 hover:text-black"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
