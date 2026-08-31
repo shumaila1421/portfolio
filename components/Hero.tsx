@@ -24,8 +24,10 @@ export default function Hero() {
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-gray-600 sm:text-xl">
-            I&apos;m Shumaila Riaz, a developer focused on building modern,
-            responsive, and user-friendly web applications.
+            I&apos;m{" "}
+            <span className="font-semibold text-gray-900">Shumaila Riaz</span>,
+            a developer focused on building modern, responsive, and
+            user-friendly web applications.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">

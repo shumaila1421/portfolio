@@ -19,17 +19,20 @@ export default function About() {
 
         <div>
           <p className="text-lg leading-8 text-gray-600">
-            I&apos;m a Full Stack Web Developer passionate about building
-            modern, responsive, and user-friendly web applications. I enjoy
-            solving problems, learning new technologies, and turning ideas into
-            clean and functional digital experiences.
+            I&apos;m a{" "}
+            <span className="font-semibold text-gray-900">
+              Full Stack Web Developer
+            </span>{" "}
+            passionate about building modern, responsive, and user-friendly web
+            applications. I enjoy solving problems, learning new technologies,
+            and turning ideas into clean, functional digital experiences.
           </p>
 
           <p className="mt-5 text-lg leading-8 text-gray-600">
             I&apos;m continuously improving my skills through hands-on projects,
             collaboration, and real-world development experience. I&apos;m
-            always looking for opportunities to learn, contribute, and grow as a
-            developer.
+            looking for opportunities where I can learn, contribute, and grow as
+            a developer.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
