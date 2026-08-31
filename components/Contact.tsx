@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="border-t border-gray-100 px-6 py-24 sm:py-32"
+      className="border-t border-gray-100 px-6 py-24 sm:py-24"
     >
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
