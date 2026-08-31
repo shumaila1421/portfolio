@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="border-t border-gray-100 px-6 py-24 sm:py-24"
+      className="border-t border-gray-100 px-6 py-20 sm:py-24"
     >
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
@@ -14,17 +14,30 @@ export default function Contact() {
             Let&apos;s build something together.
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-5 text-lg leading-8 text-gray-600">
             I&apos;m always open to discussing new opportunities, projects, and
             collaborations.
           </p>
 
-          <a
-            href="mailto:your-email@example.com"
-            className="mt-8 inline-block rounded-full bg-black px-7 py-3 text-sm font-medium text-white transition hover:bg-gray-800"
-          >
-            Send Me an Email
-          </a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="https://github.com/shumaila1421"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-gray-300 px-6 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:bg-gray-100"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/shumaila-riaz-56ab30354/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-gray-300 px-6 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:bg-gray-100"
+            >
+              LinkedIn ↗
+            </a>
+          </div>
         </div>
       </div>
     </section>
